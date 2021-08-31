@@ -30,6 +30,22 @@ func getCompleteName() (firstName, middleName, lastName string) {
 	return
 }
 
+// function variadic
+func sumAll(numbers ...int) int {
+	total := 0
+
+	for _, value := range numbers {
+		total += value
+	}
+
+	return total
+}
+
+// function value
+func getGoodBye(name string) string {
+	return "Good Bye " + name
+}
+
 func main() {
 	for i := 0; i < 3; i++ {
 		sayHello()
@@ -43,4 +59,17 @@ func main() {
 
 	fmt.Println(firstName)
 	fmt.Println(getCompleteName())
+
+	total := sumAll()
+	total = sumAll(1, 2, 3, 4, 5, 6, 7, 8, 9)
+	fmt.Println(total)
+
+	// menggunakan slice sebagai variadic function
+	slice := []int{10, 20, 30, 40, 50, 60}
+	total = sumAll(slice...)
+	fmt.Println(total)
+
+	// menggunakan function value
+	sayGoodBye := getGoodBye("Firman")
+	fmt.Println(sayGoodBye)
 }
