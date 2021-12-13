@@ -1,3 +1,3 @@
-module example.com/hello
+module belajar-golang/golang-dasar
 
 go 1.17
