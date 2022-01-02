@@ -5,9 +5,9 @@ import "testing"
 func TestHelloWorld(t *testing.T) {
 	result := HelloWorld("Firman")
 
-	if result != "Hello Firman" {
+	if result != "HelloFirman" {
 		// error 
-		panic("Result is not Hello Firman")
+		Fail("Result is not Hello Firman")
 	}
 }
 
